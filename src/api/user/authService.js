@@ -5,11 +5,13 @@ const User = require('./user')
 const env = require('../../.env')
 const emailRegex = /\S+@\S+\.\S+/
 const passwordRegex = /((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,20})/
+
 const sendErrorsFromDB = (res, dbErrors) => {
     const errors = []
     _.forIn(dbErrors.errors, error => errors.push(error.message))
     return res.status(400).json({ errors })
 }
+
 const login = (req, res, next) => {
     const email = req.body.email || ''
     const password = req.body.password || ''
@@ -18,7 +20,7 @@ const login = (req, res, next) => {
             return sendErrorsFromDB(res, err)
         } else if (user && bcrypt.compareSync(password, user.password)) {
             const token = jwt.sign({ ...user }, env.authSecret, {
-                expiresIn: "2 day"
+                expiresIn: "1 day"
             })
             const { name, email } = user
             res.json({ name, email, token })
@@ -50,11 +52,14 @@ const signup = (req, res, next) => {
             ]
         })
     }
+
     const salt = bcrypt.genSaltSync()
     const passwordHash = bcrypt.hashSync(password, salt)
+
     if (!bcrypt.compareSync(confirmPassword, passwordHash)) {
         return res.status(400).send({ errors: ['Senhas não conferem.'] })
     }
+
     User.findOne({ email }, (err, user) => {
         if (err) {
             return sendErrorsFromDB(res, err)
@@ -72,6 +77,7 @@ const signup = (req, res, next) => {
         }
     })
 }
+
 module.exports = { login, signup, validateToken }
 
 
