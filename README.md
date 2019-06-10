@@ -18,19 +18,20 @@ $ npm i
 
 > No Postman publiquei algumas Collections para facilitar o teste (links abaixo).
 
-### 3) Autenticação com token jwt
+### 3) É Necessário regristar-se para gerar o token (signup), após isto utilize o token no Postman.
 
- Primeiro acesse as rotas OpenApi, são rotas abertas para acessar sem autenticação
+* Autenticação com token jwt *
 
-### 4) É Necessário regristar-se para gerar o token (signup), após isto utilize o token no Postman.  
+> Primeiro acesse as rotas OpenApi, são rotas abertas para acessar sem autenticação
 
-> Está collection contém as rotas OpenApi.
-
-> 4) Auth/User / (Signup, Login, ValidateToken)
+> Está collection contém as rotas OpenApi (/oapi).
+> Auth/User / (Signup, Login, ValidateToken)
 > https://documenter.getpostman.com/view/7752825/S1TbRZvJ
 
-### 5) Node.js REST / (get, post, put, delete)
+### 4) Node.js REST / (get, post, put, delete)
+
 > https://documenter.getpostman.com/view/7752825/S1TbRZvF?version=latest
+
 > 5.1) Request via POST - Modelo x-www-form-urlencoded
 
 * Key-Value-Edit
@@ -46,4 +47,5 @@ descricao:<descricao>
 ```
 >
 ### 6) Features: Objeto de resumo do caixa: (virtualCashiers/resumo)
+
 > https://documenter.getpostman.com/view/7752825/S1TbRZvH?version=latest
