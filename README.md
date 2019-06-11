@@ -13,25 +13,26 @@ $ npm i
 > *(obs: por praticidade deixei uma key no arquivo .env_rename, 
 > mas na versão desta API no heroku a key não é visível).*
 
+### 3) Execute o serviço do MongoDB Server
+
 
 > **IMPORTANTE**
 >
 > No Postman publiquei algumas Collections para facilitar o teste (links abaixo).
 
-### 3) É Necessário regristar-se para gerar o token (signup), após isto utilize o token no Postman.
+### 4) Registre-se (signup) para gerar o token
 
-* Autenticação com token jwt *
+*Autenticação com token **jwt***
 
-> Primeiro acesse as rotas OpenApi, são rotas abertas para acessar sem autenticação
+> **NOTA**
+> 
+> utilize o token no Postman, Acesse as rotas **OpenApi** **"/oapi"**, são rotas abertas para acessar sem autenticação.
 >
-> Esta collection contém as rotas OpenApi (/oapi).
-
-
 > Auth/User / (Signup, Login, ValidateToken)
 >
 > https://documenter.getpostman.com/view/7752825/S1TbRZvJ
 
-### 4) Node.js REST / (get, post, put, delete)
+### 5) Node.js REST / (get, post, put, delete)
 
 > https://documenter.getpostman.com/view/7752825/S1TbRZvF?version=latest
 >
