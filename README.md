@@ -13,14 +13,33 @@ $ npm i
 > *(obs: por praticidade deixei uma key no arquivo .env_rename, 
 > mas na versão desta API no heroku a key não é visível).*
 
-### 3) Execute o serviço do MongoDB Server
+### 3) Inicie o serviço do banco de dados do MongoDB
 
+> Para iniciar o MongoDB, execute *mongod.exe*
+
+```bash
+$ mongod.exe.
+```
+> "C: \ Arquivos de Programas \ MongoDB \ Server \ 4.0 \ bin \ mongod.exe" --dbpath = "c: \ data \ db"
+
+
+### 4) Executando o projeto
+
+> Ambiente de desenvolvimento *scripts dev *
+```bash
+$ npm run dev
+```
+
+> Ambiente de produção *scripts production *
+```bash
+$ start pm2
+```
 
 > **IMPORTANTE**
 >
 > No Postman publiquei algumas Collections para facilitar o teste (links abaixo).
 
-### 4) Registre-se (signup) para gerar o token
+### 5) Registre-se (signup) para gerar o token
 
 *Autenticação com token **jwt***
 
@@ -32,11 +51,11 @@ $ npm i
 >
 > https://documenter.getpostman.com/view/7752825/S1TbRZvJ
 
-### 5) Node.js REST / (get, post, put, delete)
+### 6) Node.js REST / (get, post, put, delete)
 
 > https://documenter.getpostman.com/view/7752825/S1TbRZvF?version=latest
 >
-> 5.1) Request via POST - Modelo x-www-form-urlencoded
+> 6.1) Request via POST - Modelo x-www-form-urlencoded
 
 * Key-Value-Edit
 ```bash
@@ -50,6 +69,6 @@ tipo:<tipo>
 descricao:<descricao>
 ```
 >
-### 6) Features: Objeto de resumo do caixa: (virtualCashiers/resumo)
+### 7) Features: Objeto de resumo do caixa: (virtualCashiers/resumo)
 
 > https://documenter.getpostman.com/view/7752825/S1TbRZvH?version=latest
