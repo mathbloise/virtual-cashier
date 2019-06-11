@@ -10,8 +10,8 @@ $ npm i
 ```
 
 ### 2) Renomeie o arquivo .env_rename para .env
-> *(obs: por praticidade para o teste deixei uma key no arquivo .env_rename, 
-> mas na versão desta API que está em produção no heroku a key não é visível).*
+> *(obs: por praticidade deixei uma key no arquivo .env_rename, 
+> mas na versão desta API no heroku a key não é visível).*
 
  
 > **IMPORTANTE**
@@ -25,7 +25,9 @@ $ npm i
 > Primeiro acesse as rotas OpenApi, são rotas abertas para acessar sem autenticação
 
 > Está collection contém as rotas OpenApi (/oapi).
+
 > Auth/User / (Signup, Login, ValidateToken)
+
 > https://documenter.getpostman.com/view/7752825/S1TbRZvJ
 
 ### 4) Node.js REST / (get, post, put, delete)
